@@ -1,0 +1,22 @@
+.venv/
+.tools/
+.pgdata/
+.pgdata_test/
+data/raw/
+data/objects/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+.env
+*.pyc
+logs/
+.pytest_cache/
+.claude/
+.DS_Store
+*.sb-*
+# cotações da B3 não são redistribuídas: baixadas da própria B3 na 1ª execução
+data/snapshot/b3/
+# material de divulgação (o vídeo é grande; os prints ficam no repositório)
+media/*.mp4
+media/*.md
+media/prints/*.md

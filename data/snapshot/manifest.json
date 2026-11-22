@@ -1,0 +1,1556 @@
+{
+ "created_at": "2026-11-20T22:46:00Z",
+ "note": "Snapshot real obtido das fontes públicas oficiais; usado quando a rede está indisponível.",
+ "files": [
+  {
+   "path": "bcb/sgs_1.json",
+   "origin": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados?formato=json&dataInicial=01/01/2020&dataFinal=20/11/2026",
+   "sha256": "c0625e3b8f81cda3540b1bbabbf7c4593f8afd99db3887b84c26fb874d2d4106",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "bcb/sgs_432.json",
+   "origin": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial=01/01/2018&dataFinal=20/11/2026",
+   "sha256": "9e89755d312dd23fa18a2f7d014e86b16dc3353e1ea89cb2e42eb93613b2aee2",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "bcb/sgs_433.json",
+   "origin": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json&dataInicial=01/01/2015&dataFinal=20/11/2026",
+   "sha256": "7d827800b4abca3168a4baa76d046b0ac8bcb141f26ed2d32f3d42e3339c8b11",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_2022.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip",
+   "sha256": "122871917ae27c9300c4712ccda7443e50da90cc80083d7a9631f9b61b7dd876",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_2022.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0cdb73c0aa57a68e8b2c2d0a0b4a1a3ccce359f16c2964fde656f9624de9a6a4"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_2023.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+   "sha256": "97ea0264972e33342db674cb89202233f21e11fe3bac61f2d74443534d707e92",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_2023.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5748ee4e9f1c8cd428931050e9da2ead174ad737af11d842a50d7bad8064145b"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+   "sha256": "4376c994d6fbe5c5fcdacd055a7cc859d162a78f711e21d8ccd0e3893c0ac3a9",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+   "sha256": "713c32c0ab6c288f24290e19a6ad65f495d7296e99710fd94c9496a24ac112ff",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPA_con_2022.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip",
+   "sha256": "61014ee09cfaff2dc98078942e8d4b2a001ab190a95ca1c84df2e7cbda3dea97",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPA_con_2022.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0cdb73c0aa57a68e8b2c2d0a0b4a1a3ccce359f16c2964fde656f9624de9a6a4"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPA_con_2023.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+   "sha256": "70d3d2740eda0922a2aab6e6c133d5acf049f7b664005d6a3888a6d66893689f",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPA_con_2023.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5748ee4e9f1c8cd428931050e9da2ead174ad737af11d842a50d7bad8064145b"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPA_con_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+   "sha256": "6b3484b31dda63de9fda1b0260f852d7fa0fd6ba9703c3633a5816e4154df7cb",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPA_con_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPA_con_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+   "sha256": "a1f156cb035d152d121fde54b088463b5e2ff634650ca62fbb26bf61f854230f",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPA_con_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPA_ind_2022.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip",
+   "sha256": "75a478651e9dfb3f99a708cdb3a9fa74f6357e2a84997ba8cb909a5c45f8e6a7",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPA_ind_2022.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0cdb73c0aa57a68e8b2c2d0a0b4a1a3ccce359f16c2964fde656f9624de9a6a4"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPA_ind_2023.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+   "sha256": "5a156c830403b5c4f5b3e755345e65dea76a210f22d890d46b713d12f37da2d3",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPA_ind_2023.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5748ee4e9f1c8cd428931050e9da2ead174ad737af11d842a50d7bad8064145b"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPA_ind_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+   "sha256": "b5facb7feed69c97b9d88240fabfd2cba4d86442001b450e91f2cef990087839",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPA_ind_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPA_ind_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+   "sha256": "208160b61f5c0759bc47358fc0bacd97c62e00a27a66ffcd401c528bd7d438a8",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPA_ind_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPP_con_2022.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip",
+   "sha256": "840853ffd174caf21e121345eec5bc52f2b8756c1a63a0a7fed75cda0e160a68",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPP_con_2022.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0cdb73c0aa57a68e8b2c2d0a0b4a1a3ccce359f16c2964fde656f9624de9a6a4"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPP_con_2023.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+   "sha256": "8c61fc126445d2a02852aab37f5581857262d4f892a284295562f12e4bce651e",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPP_con_2023.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5748ee4e9f1c8cd428931050e9da2ead174ad737af11d842a50d7bad8064145b"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPP_con_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+   "sha256": "95487be2c9f3cb935d6ce99995bb57d82bef44fbddb8c39fe8f041e315efbcb0",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPP_con_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPP_con_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+   "sha256": "50fd664711fcac5b34a97482912a1ae83507e19466752881e5b73d033d65385f",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPP_con_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPP_ind_2022.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip",
+   "sha256": "7f193e2578dec555bda005eb1d954938b446b224470ac5da117a16681f826a7b",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPP_ind_2022.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0cdb73c0aa57a68e8b2c2d0a0b4a1a3ccce359f16c2964fde656f9624de9a6a4"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPP_ind_2023.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+   "sha256": "7019fdd3e316c66855134fd0c2f0456f378cf2db34bade3536cca3f5b9d383b1",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPP_ind_2023.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5748ee4e9f1c8cd428931050e9da2ead174ad737af11d842a50d7bad8064145b"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPP_ind_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+   "sha256": "ea724d540bf4c2f5c4c66aec2b4fbfc800a10f7c65daef12f8d52c3c640d2f76",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPP_ind_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_BPP_ind_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+   "sha256": "e71bee9ad32723fde4bcbb4cfafc3d243b8ae791569f346915d4281b915e6643",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_BPP_ind_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DFC_MI_con_2022.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip",
+   "sha256": "80b645210958a81aabb02113d61bf31d8ed166cca5cc070ed44492327c21585a",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DFC_MI_con_2022.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0cdb73c0aa57a68e8b2c2d0a0b4a1a3ccce359f16c2964fde656f9624de9a6a4"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DFC_MI_con_2023.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+   "sha256": "1973b9ef05bc74c8b49ac7510ef627a651e464fb9da98b6d3d35ad8122a78fe8",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DFC_MI_con_2023.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5748ee4e9f1c8cd428931050e9da2ead174ad737af11d842a50d7bad8064145b"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DFC_MI_con_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+   "sha256": "02e9e6bbf2c930a45770ba3581432b302da7bc0f0ac53ab400797d5c90f85070",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DFC_MI_con_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DFC_MI_con_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+   "sha256": "fdf3d13d5db6c270463fe7d2060e97fd872a2b8eb809faeb49dbfc9f524a45c6",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DFC_MI_con_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DFC_MI_ind_2022.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip",
+   "sha256": "d92ddeead0755fbb27c4a208bc9e4bde0b9a2a97a492028c5c5d641574069dbc",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DFC_MI_ind_2022.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0cdb73c0aa57a68e8b2c2d0a0b4a1a3ccce359f16c2964fde656f9624de9a6a4"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DFC_MI_ind_2023.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+   "sha256": "4d4a473c77e68f4917de9b59efaf2e5055dd32956096e5608c5471cacfdf1be6",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DFC_MI_ind_2023.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5748ee4e9f1c8cd428931050e9da2ead174ad737af11d842a50d7bad8064145b"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DFC_MI_ind_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+   "sha256": "d0b87741d7309d3efe07247db485eb29597afa1d68d378f2d312b6ce5443d203",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DFC_MI_ind_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DFC_MI_ind_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+   "sha256": "03ae375b40014ae4de55faef79fc6d4616044eff3d5350d3563290b48080e12d",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DFC_MI_ind_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DRE_con_2022.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip",
+   "sha256": "1b611a0a838946222d197edddafe0cc029d2d3c09a2bdca5b23ad4f0e70f8870",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DRE_con_2022.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0cdb73c0aa57a68e8b2c2d0a0b4a1a3ccce359f16c2964fde656f9624de9a6a4"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DRE_con_2023.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+   "sha256": "9e4de5b6fc400a107e813c741fe90bc1b2b4a55333dacd3e1fbc4449df718bc4",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DRE_con_2023.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5748ee4e9f1c8cd428931050e9da2ead174ad737af11d842a50d7bad8064145b"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DRE_con_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+   "sha256": "f329703ded4c876ee3347e61bce0b6edec56a19d44e4c7dc16d88ab25a4edf36",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DRE_con_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DRE_con_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+   "sha256": "9f42d73b22e32498f49ed387ed6391fa44b7124aa761f9a40b7d29d4218a3ed8",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DRE_con_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DRE_ind_2022.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip",
+   "sha256": "d53afce91079e377467d36b057990c78c6c43d96da8f348a0d833770cfa1cf51",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DRE_ind_2022.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0cdb73c0aa57a68e8b2c2d0a0b4a1a3ccce359f16c2964fde656f9624de9a6a4"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DRE_ind_2023.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+   "sha256": "0584efb6878f09cc0dbebcb83c97c7e2f7d309605818645998b6b015378283bc",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DRE_ind_2023.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5748ee4e9f1c8cd428931050e9da2ead174ad737af11d842a50d7bad8064145b"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DRE_ind_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+   "sha256": "8f89bdbd801cd1b87c85cb0910d88c6920930e930263cf195a6b119f8aabda22",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DRE_ind_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_DRE_ind_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+   "sha256": "42bae2e25e6415be8ffde244607c748e9aec22429379f450bcd032747513681a",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo dfp_cia_aberta_DRE_ind_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip",
+   "sha256": "cce351fae49eac69c552e67eb4e27b968cca7b725887538d37c4db49e849c9c5",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5297f51f628243f725bc53151d894cafe638c83968eb35b2fcc32c4a2782c6c8"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip",
+   "sha256": "4b454a6c62b79d2d8d85adb62d591e39f7648743aaeb13f42f7ba34fb6fbf66a",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "518d4fc5d452dd109f7d8772c43ce495d9b4ef0d978b9c7270446901ae7cafbc"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_2026.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+   "sha256": "d38fe97c1f90d376c6b85c11e5e63325f65d928bec7bf12677419c889769460e",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_2026.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "a578a832671afa859de4e6355d76f4e372814976d6fe61f8d12f14062dfd425f"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPA_con_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip",
+   "sha256": "97cf06aaeb7c4967f91ea29db994f198ddb3e9e4c2770c80a7c08d77f93187a5",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPA_con_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5297f51f628243f725bc53151d894cafe638c83968eb35b2fcc32c4a2782c6c8"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPA_con_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip",
+   "sha256": "0cf2a24e8e797b7a9731cd30eca806cd23152f880a708c0d02fd0c2edd6d49c9",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPA_con_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "518d4fc5d452dd109f7d8772c43ce495d9b4ef0d978b9c7270446901ae7cafbc"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPA_con_2026.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+   "sha256": "edeef71821411d0e9902870c633fc26c329cfc53e64eaca34d72ba3490c36597",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPA_con_2026.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "a578a832671afa859de4e6355d76f4e372814976d6fe61f8d12f14062dfd425f"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPA_ind_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip",
+   "sha256": "f044d709cf40bbcd7d0e6ded745b0fcd49a6bb9a94c45b1d701bf63fb87c3b9b",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPA_ind_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5297f51f628243f725bc53151d894cafe638c83968eb35b2fcc32c4a2782c6c8"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPA_ind_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip",
+   "sha256": "669a7ff1cd5f5ef03a6158b1138ff0f12d55d8eadad8b0aa60d504554f8ba5d8",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPA_ind_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "518d4fc5d452dd109f7d8772c43ce495d9b4ef0d978b9c7270446901ae7cafbc"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPA_ind_2026.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+   "sha256": "c1d2d13ebc42f94794c3dac2257992755a2ac8e76f847d99605b648330b95e79",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPA_ind_2026.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "a578a832671afa859de4e6355d76f4e372814976d6fe61f8d12f14062dfd425f"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPP_con_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip",
+   "sha256": "56fe0f474561c9f5551e66d9a4ad28b33af9a0e7431cd9ee1ce0b98663390ac7",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPP_con_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5297f51f628243f725bc53151d894cafe638c83968eb35b2fcc32c4a2782c6c8"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPP_con_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip",
+   "sha256": "8840f780a45d94fed0f5e8f8543913b3a675369b1874252687b52bff2fc44f3b",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPP_con_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "518d4fc5d452dd109f7d8772c43ce495d9b4ef0d978b9c7270446901ae7cafbc"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPP_con_2026.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+   "sha256": "0a472cd4ac2e931760a3b7bb523befa6ace02962000ed03a951a69f4e5e96150",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPP_con_2026.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "a578a832671afa859de4e6355d76f4e372814976d6fe61f8d12f14062dfd425f"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPP_ind_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip",
+   "sha256": "6fa14b7028195937c4e63021644219a2704577cc915c6df379c0dc31ac90b2f0",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPP_ind_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5297f51f628243f725bc53151d894cafe638c83968eb35b2fcc32c4a2782c6c8"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPP_ind_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip",
+   "sha256": "d44cf6986b843b62898bd533b24dee52903bf341923350b27282d045960b98ce",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPP_ind_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "518d4fc5d452dd109f7d8772c43ce495d9b4ef0d978b9c7270446901ae7cafbc"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_BPP_ind_2026.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+   "sha256": "b2c4c9e77aac36edacc6429e408603c456333802386f86a6b0b7a56ab2f71fba",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_BPP_ind_2026.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "a578a832671afa859de4e6355d76f4e372814976d6fe61f8d12f14062dfd425f"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DFC_MI_con_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip",
+   "sha256": "f03d540150c94e05eb356dfac3c23c28e215d97e306117ddf5889a52c79e4507",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DFC_MI_con_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5297f51f628243f725bc53151d894cafe638c83968eb35b2fcc32c4a2782c6c8"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DFC_MI_con_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip",
+   "sha256": "78398aac8242db3c8732b8fd5d1f36ae22de59dbe82a93bcf3e68371cda79057",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DFC_MI_con_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "518d4fc5d452dd109f7d8772c43ce495d9b4ef0d978b9c7270446901ae7cafbc"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DFC_MI_con_2026.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+   "sha256": "d69333dfae0c7a2e3bee395f04099025a79c639a5d028689358057032ca89da2",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DFC_MI_con_2026.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "a578a832671afa859de4e6355d76f4e372814976d6fe61f8d12f14062dfd425f"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DFC_MI_ind_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip",
+   "sha256": "43fb01fbfa6da0a07ca1f83a7893ecb3ef00639a20192fcd8194fd4a921cbeaa",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DFC_MI_ind_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5297f51f628243f725bc53151d894cafe638c83968eb35b2fcc32c4a2782c6c8"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DFC_MI_ind_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip",
+   "sha256": "93ee77034832487ac2046ccf41094ab9ceac8566637f565718566a245195dde8",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DFC_MI_ind_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "518d4fc5d452dd109f7d8772c43ce495d9b4ef0d978b9c7270446901ae7cafbc"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DFC_MI_ind_2026.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+   "sha256": "6035733bc2c31cea50d3a150904fce52fc3d181d8f1b913f22edf49a700cb795",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DFC_MI_ind_2026.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "a578a832671afa859de4e6355d76f4e372814976d6fe61f8d12f14062dfd425f"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DRE_con_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip",
+   "sha256": "c883662b2d1459bc2d847b443ac94a12acd26286559260dd6ea19978dcc45ed2",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DRE_con_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5297f51f628243f725bc53151d894cafe638c83968eb35b2fcc32c4a2782c6c8"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DRE_con_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip",
+   "sha256": "fda699e2bca566f01f9114eddda5b207d2d119d3d11a8108181da4f9366f3674",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DRE_con_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "518d4fc5d452dd109f7d8772c43ce495d9b4ef0d978b9c7270446901ae7cafbc"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DRE_con_2026.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+   "sha256": "7a8b423d61f0a677e41c23b6be3dd4f32c42e9cbfe5e94805dcce840d757d1f7",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DRE_con_2026.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "a578a832671afa859de4e6355d76f4e372814976d6fe61f8d12f14062dfd425f"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DRE_ind_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip",
+   "sha256": "d901a080552f0f2cea2d64dedfd845744e7162c3e2de02d84887605a23d6c248",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DRE_ind_2024.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "5297f51f628243f725bc53151d894cafe638c83968eb35b2fcc32c4a2782c6c8"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DRE_ind_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip",
+   "sha256": "ae1594b19025e4b01d08b4a797c811c387dc50843b445327fc98c295219e81f4",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DRE_ind_2025.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "518d4fc5d452dd109f7d8772c43ce495d9b4ef0d978b9c7270446901ae7cafbc"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_DRE_ind_2026.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+   "sha256": "5928c730b01112219a684a176124e528b50fdb7be126309c140b494c57df1e25",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CD_CVM in (009512,004170) do arquivo itr_cia_aberta_DRE_ind_2026.csv contido no zip; SRC_LINE = linha no CSV original (1 = cabeçalho); demais colunas intactas",
+   "origin_zip_sha256": "a578a832671afa859de4e6355d76f4e372814976d6fe61f8d12f14062dfd425f"
+  },
+  {
+   "path": "fred/DCOILBRENTEU.csv",
+   "origin": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU",
+   "sha256": "aa587e1c6edc32b9e3cdfe2dd332245c9d1076868d5735909b1f1644b325eb85",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "fred/DGS10.csv",
+   "origin": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
+   "sha256": "078cf9534a352af6007ae9e93cd7beb94b2616d57bc469e8e895ba19a322ccce",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "sec/aapl-20220924.htm",
+   "origin": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/aapl-20220924.htm",
+   "sha256": "a6a9c38f5f731b43c9c24cc09dfd6db2dc2e322c601b018474df01023308ea01",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "sec/aapl-20230930.htm",
+   "origin": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+   "sha256": "c3921724a41710df0793b395f06c414cef6480f80b2b03905d6c5e58a4de4d2e",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "sec/aapl-20240928.htm",
+   "origin": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+   "sha256": "2f2f3508246c6f38257c0de714d453c1e32031073b2596860107950f68a8a56b",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "sec/aapl-20250927.htm",
+   "origin": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+   "sha256": "21719492a3695c7e47127a8bcdd6cf52bcbdffcde5a545d4cdb419586c6200bb",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "sec/aapl-20260926.htm",
+   "origin": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm",
+   "sha256": "f8dca7d520bc670b4451e8105d0cca23fc76f756893dccaee63dc2fb928f6b26",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "sec/companyfacts_CIK0000320193.json",
+   "origin": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+   "sha256": "f085735b4d08fb116ade18d24247ffabe11df8eb52eae6556b165831f15ef1ad",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "sec/submissions_CIK0000320193.json",
+   "origin": "https://data.sec.gov/submissions/CIK0000320193.json",
+   "sha256": "f001022596bb110c821112a8b12f794e0d5c545475b7d5f0ccfb42d9b431e57b",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_composicao_capital_2022.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2022.zip",
+   "sha256": "e5ed78896c0a85127301a43c44f0d99bd3f1e8e6dff4234264ff4a43e3824aa1",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CNPJ (Petrobras, Vale) do arquivo dfp_cia_aberta_composicao_capital_2022.csv; SRC_LINE = linha no CSV original",
+   "origin_zip_sha256": "0cdb73c0aa57a68e8b2c2d0a0b4a1a3ccce359f16c2964fde656f9624de9a6a4"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_composicao_capital_2023.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+   "sha256": "db4754ffb6a95acacc45ebe710c5590da81af5307a3f0200f427e4127da681ae",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CNPJ (Petrobras, Vale) do arquivo dfp_cia_aberta_composicao_capital_2023.csv; SRC_LINE = linha no CSV original",
+   "origin_zip_sha256": "5748ee4e9f1c8cd428931050e9da2ead174ad737af11d842a50d7bad8064145b"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_composicao_capital_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+   "sha256": "da6ed1e6ee9cf0f73d0c9b9d23f07470cbafbd29eae59dc46dc4e18d7ad95b1f",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CNPJ (Petrobras, Vale) do arquivo dfp_cia_aberta_composicao_capital_2024.csv; SRC_LINE = linha no CSV original",
+   "origin_zip_sha256": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+  },
+  {
+   "path": "cvm/dfp_cia_aberta_composicao_capital_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+   "sha256": "1861f0f63de225fcdde3a6a4db63e0af62c26b4c8cdb5cd488bdf1e17240dae8",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CNPJ (Petrobras, Vale) do arquivo dfp_cia_aberta_composicao_capital_2025.csv; SRC_LINE = linha no CSV original",
+   "origin_zip_sha256": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_composicao_capital_2024.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip",
+   "sha256": "1d568cc8e3e8cb8ad71ccc34611f26616551bd40d90d151e56c7f226632a7251",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CNPJ (Petrobras, Vale) do arquivo itr_cia_aberta_composicao_capital_2024.csv; SRC_LINE = linha no CSV original",
+   "origin_zip_sha256": "5297f51f628243f725bc53151d894cafe638c83968eb35b2fcc32c4a2782c6c8"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_composicao_capital_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip",
+   "sha256": "bb4e7b428d19dad278bdd00fa3a9768fe12151958acadd95a53d8de8bc3142dc",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CNPJ (Petrobras, Vale) do arquivo itr_cia_aberta_composicao_capital_2025.csv; SRC_LINE = linha no CSV original",
+   "origin_zip_sha256": "518d4fc5d452dd109f7d8772c43ce495d9b4ef0d978b9c7270446901ae7cafbc"
+  },
+  {
+   "path": "cvm/itr_cia_aberta_composicao_capital_2026.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+   "sha256": "7bb1405317dded9761ee0ab75000a5bd0d3e3c092e0923147b55479f6a5924b9",
+   "fetched_at": "2026-11-20T22:46:00Z",
+   "transform": "filtro CNPJ (Petrobras, Vale) do arquivo itr_cia_aberta_composicao_capital_2026.csv; SRC_LINE = linha no CSV original",
+   "origin_zip_sha256": "a578a832671afa859de4e6355d76f4e372814976d6fe61f8d12f14062dfd425f"
+  },
+  {
+   "path": "b3/COTAHIST_A2024_vista.txt",
+   "origin": "https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_A2024.ZIP",
+   "sha256": "62fb8571cea060c0346d713a0b2a48afe7e3ec673c20df5a486a43b24ed613a9",
+   "fetched_at": "2026-11-21T02:05:00Z",
+   "origin_zip_sha256": "96a003d10fab0fa2ace0c64cdc2b892b4c111adf9da8e538aa0b28437bd2a172",
+   "transform": "linhas TPMERC=010 e CODBDI in (02,14) do TXT oficial; prefixo \"N|\" = número da linha no arquivo original; 1ª linha = cabeçalho original"
+  },
+  {
+   "path": "b3/COTAHIST_A2025_vista.txt",
+   "origin": "https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_A2025.ZIP",
+   "sha256": "e9e5b776d57190976e1920ea6757b9b3f0bfa0da1b6b3b7d275f430c20b6681b",
+   "fetched_at": "2026-11-21T02:05:00Z",
+   "origin_zip_sha256": "6cc0ad851c8f605ca30418acac48be81f1767f6ed05b4f563772d06ae448047d",
+   "transform": "linhas TPMERC=010 e CODBDI in (02,14) do TXT oficial; prefixo \"N|\" = número da linha no arquivo original; 1ª linha = cabeçalho original"
+  },
+  {
+   "path": "b3/COTAHIST_A2026_vista.txt",
+   "origin": "https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_A2026.ZIP",
+   "sha256": "adc1125f6520952281bdc736a975060ff16dcad76a423b155d442dc261c3a37d",
+   "fetched_at": "2026-11-21T02:05:00Z",
+   "origin_zip_sha256": "f04c7606e7c5c71b874447ea04e2a4eb575f61ef9798f4205c030c22c056a4bf",
+   "transform": "linhas TPMERC=010 e CODBDI in (02,14) do TXT oficial; prefixo \"N|\" = número da linha no arquivo original; 1ª linha = cabeçalho original"
+  },
+  {
+   "path": "news/cvm/ipe_cia_aberta_2025.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/IPE/DADOS/ipe_cia_aberta_2025.zip",
+   "sha256": "25409c87545ba6faf09e68383ebd2fb9e62661543bf61b5ddae39ad41c40b51f",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "filtrado para Petrobras/Vale (CVM IPE)"
+  },
+  {
+   "path": "news/cvm/ipe_cia_aberta_2026.csv",
+   "origin": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/IPE/DADOS/ipe_cia_aberta_2026.zip",
+   "sha256": "ab9a880caccf63bcb1715582b9009ea8c86eeccfdd29a7704950722dc8d019b3",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "filtrado para Petrobras/Vale (CVM IPE)"
+  },
+  {
+   "path": "news/fed/press_all.xml",
+   "origin": "https://www.federalreserve.gov/feeds/press_all.xml",
+   "sha256": "72529d13594fbe7456a5701eb087c253b2cff213510b8d76e442bd97d570aa4e",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003165.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003165)",
+   "sha256": "7295ef7a6cd67099dde93a80db1d4f6af844c98a1a1586e413df1ed3d44b7cf3",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003167.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003167)",
+   "sha256": "5240b313f8593a68a9a5f21b30642d97c7767b815e0e6662d8292923eaa4aeb9",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003182.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003182)",
+   "sha256": "0ecdc87f67790f4e0bc794ea875d5d5656d1b187b1949292d0a331e6babc0388",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003221.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003221)",
+   "sha256": "0d78dde22daa0b76ff02ae71e8600a86dda41ff22b2e8151b3139a5552d551f2",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003241.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003241)",
+   "sha256": "e6015f969e41ca72ff65515cd18470831c3350eb97b2c0328eb6553f78979d59",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003269.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003269)",
+   "sha256": "d561bac99f668f1407d8a206a39445ded2ab5893d9432cc2286b539f3397db4c",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003409.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003409)",
+   "sha256": "90f21664b1518648c7e8540fb041a18f10dde58e4713b96a1a25ab869409bcb3",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003448.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003448)",
+   "sha256": "8f4a5add7ff4b062d2343410128e73f12a2ebfa881d21c7666a8efeff5608c4d",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003472.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003472)",
+   "sha256": "3b54f34d754b97df4f8fbd20da9c649b2c0501a5456f7a8a33cb4c53c26c1efe",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003534.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003534)",
+   "sha256": "db37471e1837537de41ef04f17f7a6e28c230111b6499a434450c4c0f26dc589",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003554.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003554)",
+   "sha256": "c82514fd2a2e138eea8d3829204f3c289e97b521a4588b7896720e89aa7237d4",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003566.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003566)",
+   "sha256": "d35698b9384372336f78951c6a6544d0705fc8c7d053d31d22b6f8e7d119760d",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003567.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003567)",
+   "sha256": "cccc88d84e079eeaa5c035eb767c82af386332b217961cba0132f8ef6935b1f9",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003568.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003568)",
+   "sha256": "f78a02312d37086d5466f72583f597821f3e9892dad3a774d00bc4db9de17579",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003574.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003574)",
+   "sha256": "b81001147eb0359658f24e3a221917f9ce945b26c6cfee81c9e049204bd6cab6",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003578.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003578)",
+   "sha256": "ffe83b534974f9c4b8a1b169f93aaa9540d31dcbbc083a49542f77c800eaf475",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003586.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003586)",
+   "sha256": "c1a61c4969d9ef4ca54046b32552d15f61a165c4d1be7f8a1e3a5b80df8417cf",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003618.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003618)",
+   "sha256": "e09a2128bf4c5fe0ff6d914ee45720e387f89406a5872b26bc3f2bb26ff416dd",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003630.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003630)",
+   "sha256": "b156dafc30998bb032d1db91bc5f4ff6073d4511e27a48a112fe0df37d933fa7",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003640.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003640)",
+   "sha256": "8d295c59db958c4c8fc042efe0b32a831f2d553c92d85335880d1e3b1e9db112",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003669.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003669)",
+   "sha256": "6ff6cea1e2d1c96848a806f18f64b88097acff537c32f68f338f943946e12b21",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003701.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003701)",
+   "sha256": "55e6bd240244324e07867339b30d4fe353d698804884961d2d6c3f941c073cfe",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003703.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003703)",
+   "sha256": "429ce994a3007c57f1b68960caae20b0da91c04e7bafc3afcf53a7b44db21891",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003709.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003709)",
+   "sha256": "3fa0d29126345cc52ae624d61ea437bef9b5ee0f1b163f049046088078d9a421",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003715.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003715)",
+   "sha256": "e87803573afc5548807c461322ac1fe6a4f83c6cfbf372164ff30332b8b6f55f",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003721.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003721)",
+   "sha256": "5115a339fa6e2351b4e53f5371cd3d3d7bcc2fe6a8ff7dd8ec2f12b52425b465",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003731.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003731)",
+   "sha256": "2fd52b85bb97de2031e5f79a1b03c62f7d8d33f93a990905aa6c43093747f129",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003752.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003752)",
+   "sha256": "840dbe4770f400c077f19014be7ead8f897937cfc24557caad3e53814ba657ec",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003754.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003754)",
+   "sha256": "6b8e182e21828f97a6f5c30745c5e985897c70f278a4633fdfa63b63c7591ff9",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003758.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003758)",
+   "sha256": "51af2b93f8786eb430d4312cc92746edc1f459b3c870dd9bea32f81175474b6a",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003826.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003826)",
+   "sha256": "9055609c5805b64a197f78d9458137aef080597f0569d582a3bd3b52d01e71ec",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003838.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003838)",
+   "sha256": "4c6241cfdde9a8f16aee05b4dec73e231411b08b3f2443334e18aa6ee8968d15",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003844.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003844)",
+   "sha256": "e7c23f4fbe222e9481953067a98693932d4de9d14ea87e8d54f9abb66a63dd57",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003848.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003848)",
+   "sha256": "40726d97a0a6fc9f9186b3fc1ba9590e33c78d7a2a8c926df7904dd1bb46d777",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003850.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003850)",
+   "sha256": "b5517ed0441320f1d4884a292e54c4b1c6c52f4cd30abfdf994721f8d01e7b71",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003856.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003856)",
+   "sha256": "95dfcb41f013c043dde86f494828b2b00446334dd0080f357b74900e14686443",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003866.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003866)",
+   "sha256": "8e3051bf3518581b646ba7f186c28df1e820fe1cd223f0b2f1f9d656c4e36b6d",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003868.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003868)",
+   "sha256": "9f3b6d3c29636f076f2461031eee0b79c2c7306f5dcb334d6f5f336cc2dd4414",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003912.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003912)",
+   "sha256": "cbbf7ec561955cb35d31e4d21d102999a79fdd960dd9d22483f1deefa7bbeb78",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003914.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003914)",
+   "sha256": "e30dac8361b1f9ae1b2e4714aa048ffdaec242dd567ec6d4500b44d6c76bcd35",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003940.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003940)",
+   "sha256": "82e62690a7d21e54f26f7fa408dc90a11c50fece01a6d92c389db4bce3c3efef",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003948.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003948)",
+   "sha256": "f005c7ef11296fda340d5cf43c068d3d580b80cf7959a709155d794490c093cf",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003982.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003982)",
+   "sha256": "d8653446a9a72cb4039289065887d379c3ff19d4d715b45a497b1a022dfd1a94",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003988.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003988)",
+   "sha256": "456c393ea7926d3eea3a9cf8827fa0314f5708db6168aa9a93a915b5a8dfd8c0",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-003990.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-003990)",
+   "sha256": "da132f881b990e6f8107fb358fec5090860ccac6e9cda7ea748a4a119eb9b65b",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004000.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004000)",
+   "sha256": "bd4effde0a33fc53110b6dc073071e18e864cff9e3967714eeee4e5a60cd7708",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004002.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004002)",
+   "sha256": "dfc589d6e6b39f08944a1c094bd0a37cac65951dad5a1df233f30a30e76dad5e",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004004.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004004)",
+   "sha256": "7b68ab574ffe6062e53ab0d59c8a329dab5ad5131e1536c71dc5123f26141fde",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004006.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004006)",
+   "sha256": "cc901240ef329ed31406561066dc237319dc5338f6f1c7b0662d9ea185df6e7a",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004008.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004008)",
+   "sha256": "821baf9f651ea1ae18e62ea275a246600ccb388f670cd13997b944644540bbb4",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004010.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004010)",
+   "sha256": "89b2276463f362b2598c6da541b4d1f404edd9dc60636478fa1f5ae7dd811b09",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004012.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004012)",
+   "sha256": "e61e6220e1386c936dcdbd2e4868407265d6da2bfcfa553c9a0f70aeae95296c",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004014.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004014)",
+   "sha256": "817d8b6ebef1bc858ffd5d1ecb0972a1995da28a85a9d19b110cbf7b64230957",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004016.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004016)",
+   "sha256": "503fd53e506ed2a18c939bc2c631fc55dc1405cf8f4be609c78097190a00e892",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004018.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004018)",
+   "sha256": "ea171d68e077bb71b2151b38ba98903b33ccb527f766c31146d202c489c81b68",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004038.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004038)",
+   "sha256": "a4d6c14306836abad589b9b2fd415f290ba26f19f19e6007e120d4d436978d35",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004049.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004049)",
+   "sha256": "7487e20d95d1d18d83836007671f3259f33ebf9c465f2e5ec27a84691940852a",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004075.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004075)",
+   "sha256": "8e0732a67741f17de13113a6517f85663514af59a247e6d40f4b0788f1100453",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004085.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004085)",
+   "sha256": "370925b4a00bf06c0095c7866f70a89be013f844832a1f0c296c8f4e848e282e",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004123.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004123)",
+   "sha256": "b4002674b358dfd1a7c01c6bafb48910a9b900c728fc2a2d8f0bf36cc414ebc7",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004128.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004128)",
+   "sha256": "0cc73b271aac416a507be690466730e5ad58783d55e084926c4f04eb2a04f05d",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004129.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004129)",
+   "sha256": "9e78111880e34351c242c535cfdeb4847e83c72254ce4359623096425f57f413",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004131.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004131)",
+   "sha256": "61ac7cbe840abe5ef177a4a5dedfec6bb7261945b1257f607083cc26a0634b82",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004133.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004133)",
+   "sha256": "032924694fbfc2b0a316eb6a899c660aa4d10e034348ce864347b29f3b22ccb6",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004212.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004212)",
+   "sha256": "87d984b8c01827cc6e68b85252559edcbe2c49933ecff5713022c62402ec5be6",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004234.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004234)",
+   "sha256": "6a1f6ddf786e66169f0a2fd7bba1f22e406648ca1c1e78d02f91b7dea71730d2",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004262.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004262)",
+   "sha256": "d7e2df5d1279b6a98f7a8d4cce13ad5d0f923c321d263b5485f1fecef9012f97",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004270.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004270)",
+   "sha256": "d4679d80009d728c4249ec61e32b5334d29f67f4fe1b28c1468b18c8c665675e",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004304.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004304)",
+   "sha256": "3a239d953be91542eafdf24293322916023b5ff21a6f1d7ab41ab57f9237f812",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004308.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004308)",
+   "sha256": "50a166f3e57ea8084210dad8c7d9d9962b7e3b7b5f32192b5f0c2d2a96116fbc",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004314.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004314)",
+   "sha256": "4b0279c68afec1a378de4322132556a5802a2665777052486a7c9561079c359f",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004365.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004365)",
+   "sha256": "c3c4a4645b307493c0ed5c25a4411eb13c0ee6dfb4fca163538e83f20aa4334e",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004381.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004381)",
+   "sha256": "7874840270ac3020560f276e099e861fcbd05bb8cdd8809ab235287b92b7c0d9",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004493.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004493)",
+   "sha256": "543f6ee3e74a56b01ea325bb44312d19acf940bc1687ac751db06d8b9c011444",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004514.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004514)",
+   "sha256": "38d2df79c9a4dd31c4f038bcb33b501de3d91edeb55c9c139f1bf9c53475f34a",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004526.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004526)",
+   "sha256": "2376b2c953c9d306c82481452efba236ff21117f2a477db2aff43be0183751ab",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004540.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004540)",
+   "sha256": "7ddfe19f78fe31944c447d94944a4029688ba236174f29481679f1b599363133",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004582.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004582)",
+   "sha256": "8217d338e3ee85e266177dc6032f7adfb283c58aecb7c1416c768839bc7113c5",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004610.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004610)",
+   "sha256": "d1af920dd7c8cb5917a944324ba3839eb8c0893cc807ab61702552412ba02694",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004612.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004612)",
+   "sha256": "8368f5d18e272cd1f83a916a38a48fdc961f07166c30a7453d8923bff370afe5",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004640.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004640)",
+   "sha256": "1655be1dd267d8bc07c3128e1cdc8ee18365d08208c248af1eff92a1eed2a832",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004668.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004668)",
+   "sha256": "9595a963ff40a45806f0cc4c859f290f50114bd2c8095e2733900ae0d3273d5a",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004672.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004672)",
+   "sha256": "9c098aff76a0e41b6a56b515beda16f824908af6983b31be030b364a1473cfc4",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004682.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004682)",
+   "sha256": "2520913d19f0cb06aeae1202c66dff4668e90d9c964bd5f1f23c1d95ebbed14a",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004744.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004744)",
+   "sha256": "63008be6d5f98cf957619665c5753533faea54a68d3487bf0d2dae47a6d7c98d",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004746.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004746)",
+   "sha256": "3c1b5ebefde43f49cf7ffba2c698c24dae442f2715b3832c2a05b125345221d3",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004754.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004754)",
+   "sha256": "9a96bd3b5cd794ae58066d222135eb9e4bbfa959c1708b7755588deb0586bcaf",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004760.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004760)",
+   "sha256": "ea92d987cb84901af7ab412504c198752e8796b86b3d4fbaf32fbe8e8b45f0f1",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004768.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004768)",
+   "sha256": "7f06a483529afbebfe90eaca07f3b76bb87dbb859c1d889b4394408ecf325b64",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004828.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004828)",
+   "sha256": "c40ee3d79b9f733b0a441decf7151af939158cb08172bbcaff90c044a0fa9dcc",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004836.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004836)",
+   "sha256": "858e8f5b786f93c5ae95903523b68667e2a39f4a8bbc5f9fae1662b9215a4a70",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004868.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004868)",
+   "sha256": "d7b79bc0020e117b495128a465c32e85a0e2170c324365d8a92e31c2007727d0",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004898.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004898)",
+   "sha256": "5c7ec0cc75d681b2ffd6cc6e77497cfd932fb1a1dbaa009f93f8494f9d23fc8a",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004910.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004910)",
+   "sha256": "e5165eaace911b9dc9592129de13c6ae92b1f4132cff5b7fda0595acce464406",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004914.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004914)",
+   "sha256": "1ba6ffcb210c0f1fa6192df32c877958b56b062f5165044174c150570d6ddfd6",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004918.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004918)",
+   "sha256": "49facb4c488b1985aa629cfe65a1be7658ef84db08c6a981f9ee49f3748f6ac6",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004920.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004920)",
+   "sha256": "4df7f2ccefa3f710866f1ba6beea9868ac9b041603a27945e75ab7ce71f38936",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004934.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004934)",
+   "sha256": "606e67b60544d2a58af5e5fb61ce3ddf712db52c0cf3e64d8540e87af697a175",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004942.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004942)",
+   "sha256": "73dfc32da6097fdb85d315cfac8066bf84bd3d223f2d82fb168785bbd97bf24b",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-004954.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-004954)",
+   "sha256": "6ca7c79f4cdee97bc34fe3bcccbf4c16689fcb51f73e6a200d00937a80b0b732",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005030.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005030)",
+   "sha256": "2d52ba9f96da726d1c80bc9b27a068d12c6b01eef86cd43162088c374ef2d5ff",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005052.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005052)",
+   "sha256": "eb805cd95987e9471b9fe63c596e083b6b7464f1fea76a93677deba256c90f9d",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005054.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005054)",
+   "sha256": "4cc12a02f087807999a33d16e0c39723e2b87458ab23cdcfe6f262ec8350131b",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005056.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005056)",
+   "sha256": "bf70fc659fc30c17eb9461723e5026883008404ed28b43938069f31eb9aac721",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005058.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005058)",
+   "sha256": "3c06ffacb675b261a21272194177859bbcd5d980f9715245d8ee4e13b34b0779",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005070.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005070)",
+   "sha256": "da3c99d2ece550834dd72143fe74e5719045b2f1dae4cb78f0bd1cf9c9d08e84",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005140.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005140)",
+   "sha256": "67c6f5416ef7c65bedd113d1e1a474bd291fb8fd025a57293187b2d1b69f1f12",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005142.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005142)",
+   "sha256": "b077ddd7d3fc26ebe4c2ef06cdbbefa2238c603406ee6e946b3bfbe011dcb9d3",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005201.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005201)",
+   "sha256": "203e4866227d00e315355f34cd5fea0dfb1ed97b1a3661ef0284e426c3b8beb9",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005229.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005229)",
+   "sha256": "6ec8c797b1ec5ece6cafba76fa8084e74fa2dcd80d688a7f062e05d04bfe43e7",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005231.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005231)",
+   "sha256": "83d05d3560a068388a54ead2a1664ca83b5c5ae2578b2fe2a7936ffe71508928",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005239.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005239)",
+   "sha256": "f66981dc9c2d0109a1b761235e20d6ba55debf4fed6b17e4c2e751fb926a65f4",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005248.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005248)",
+   "sha256": "9f3d1f452317e166fb87b069f20289fd5db300addb26df312df386d007d52447",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005249.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005249)",
+   "sha256": "58df800892f843a6c3ffd628f7bbc1e791a26a8348f84000fce5c6ff822c990b",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005252.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005252)",
+   "sha256": "2e6db77b0cf63e6766fa36aeb0639177928de171eb04b36fb06f51ef8e07465c",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005256.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005256)",
+   "sha256": "5ebd4bb4070a4137a71b4656fde014d62c3b47ad25019341678b190ae693ebdb",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005319.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005319)",
+   "sha256": "e04b9f5b3a500b8a4622ddf87ac7369d22eb275f3c019341537b874a0ff2a3b5",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005335.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005335)",
+   "sha256": "6fe1cedffd8b4f1bbecac575af267bbcbc19d15464f0923953e30bca324730b0",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005337.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005337)",
+   "sha256": "4c52f773e9c25d223fd79e71c4c281a1bc8e417649b856e973b4f0f997b8efdf",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/0001292814-26-005346.htm",
+   "origin": "https://www.sec.gov/Archives/edgar (6-K, acesso 0001292814-26-005346)",
+   "sha256": "d09a7cf0a803c9a88ab9c52770e4721704d61d0b1a4e80cfef995d28facc52d5",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/submissions_CIK0000320193.json",
+   "origin": "https://data.sec.gov/submissions/CIK0000320193.json",
+   "sha256": "f001022596bb110c821112a8b12f794e0d5c545475b7d5f0ccfb42d9b431e57b",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/submissions_CIK0000917851.json",
+   "origin": "https://data.sec.gov/submissions/CIK0000917851.json",
+   "sha256": "4ca81f0e34b85f759817915d2f8460d8120a7e87254df8320732124009b0ce6d",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  },
+  {
+   "path": "news/sec/submissions_CIK0001119639.json",
+   "origin": "https://data.sec.gov/submissions/CIK0001119639.json",
+   "sha256": "28aa3727a040f12a3e7608d092868380d4f153eb5e8414bc0156482aec3aaf8c",
+   "fetched_at": "2026-11-21T02:13:00Z",
+   "transform": "nenhuma (bytes originais)"
+  }
+ ]
+}

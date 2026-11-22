@@ -1,0 +1,4 @@
+SRC_LINE;CNPJ_CIA;DT_REFER;VERSAO;DENOM_CIA;CD_CVM;CATEG_DOC;ID_DOC;DT_RECEB;LINK_DOC
+624;33.000.167/0001-01;2022-12-31;1;PETROLEO BRASILEIRO S.A. PETROBRAS;009512;DFP;123817;2023-03-02;http://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=123817
+650;33.592.510/0001-54;2022-12-31;1;VALE S.A.;004170;DFP;123584;2023-02-16;http://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=123584
+651;33.592.510/0001-54;2022-12-31;2;VALE S.A.;004170;DFP;123591;2023-02-16;http://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=123591
