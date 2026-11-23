@@ -36,7 +36,8 @@ MATERIAL_8K = {"1.01", "2.01", "2.02", "3.01", "5.02", "8.01"}
 # Catálogo de fontes: o que está integrado e o que depende de contrato. Site/RSS público ≠ direito de redistribuição.
 NEWS_CATALOG = [
     {"source": "SEC EDGAR 8-K/6-K", "status": "integrado", "rights": "domínio público (17 CFR 200.80)", "precision": "segundo (aceite UTC)"},
-    {"source": "CVM IPE (fatos relevantes, comunicados)", "status": "integrado", "rights": "dados abertos CVM (ODbL)", "precision": "dia (Data_Entrega)"},
+    {"source": "CVM Empresas.NET (fatos relevantes, comunicados — a cada 2 min)", "status": "integrado", "rights": "documento público CVM", "precision": "minuto (entrega)"},
+    {"source": "CVM IPE (dados abertos, histórico)", "status": "integrado", "rights": "dados abertos CVM (ODbL)", "precision": "dia (Data_Entrega)"},
     {"source": "Federal Reserve press releases", "status": "integrado", "rights": "domínio público (governo dos EUA)", "precision": "segundo (RSS pubDate)"},
     {"source": "Copom (derivado da SGS 432)", "status": "integrado (derivado)", "rights": "dados abertos BCB", "precision": "dia (vigência)"},
 ] + [{"source": s, "status": "depende de contrato", "rights": "licença de redistribuição necessária", "precision": "—"} for s in (
@@ -167,12 +168,16 @@ def ingest_cvm_ipe(year: int, cvm_codes: Dict[str, str], mode: Optional[str] = N
     run = Run(f"NEWS:CVM_IPE:{year}", used)
     inserted = 0
     norm = {k.lstrip("0"): v for k, v in cvm_codes.items()}
+    rad_known = {x["p"] for x in q("SELECT substring(external_id from 5) p FROM news_item WHERE source='CVM_DADOS' AND external_id LIKE 'rad-%%'")}
     cache: dict = {}
     with tx() as c:
         rp = save_raw(c, "CVM_DADOS", f"{url} (filtrado)", text.encode("utf-8"), used)
         for row in csv.DictReader(io.StringIO(text), delimiter=";"):
             iid = norm.get(row["Codigo_CVM"].lstrip("0"))
             if not iid or row["Categoria"] not in IPE_KEEP:
+                continue
+            pm = re.search(r"numProtocolo=(\d+)", row["Link_Download"] or "")
+            if pm and pm.group(1) in rad_known:      # já veio em tempo real (com hora) pelo Empresas.NET
                 continue
             if iid not in cache:
                 cache[iid] = (q1("SELECT short_name FROM issuer WHERE id=%s", (iid,))["short_name"], _instruments_of(iid))
@@ -188,6 +193,74 @@ def ingest_cvm_ipe(year: int, cvm_codes: Dict[str, str], mode: Optional[str] = N
                              "topics": (["dividends"] if "Provento" in cat or "Aviso aos Acionistas" in cat else []) + (["material_fact"] if cat == "Fato Relevante" else []),
                              "material": cat in ("Fato Relevante", "Relatório Proventos"), "license": "dados abertos CVM (ODbL)", "raw_payload_id": rp,
                              "meta": {"categoria": cat, "tipo": row["Tipo"], "especie": row["Especie"], "data_referencia": row["Data_Referencia"], "versao": row["Versao"]}}, links)
+            inserted += ok
+    run.stats.update(inserted=inserted)
+    return run.finish()
+
+
+RAD_URL = "https://www.rad.cvm.gov.br/ENET/frmConsultaExternaCVM.aspx/ListarDocumentos"
+_RAD_PROT = re.compile(r"OpenDownloadDocumentos\('(\d+)','(\d+)','(\d+)','IPE'\)")
+
+
+def _strip(v: str) -> str:
+    return html.unescape(re.sub(r"<[^>]+>", "", v)).strip(" -")
+
+
+def ingest_cvm_rad(cvm_codes: Dict[str, str], days: int = 1) -> dict:
+    """Quase tempo real: lista pública do Empresas.NET (RAD/CVM) com os comunicados IPE entregues hoje e ontem,
+    com hora e minuto da entrega. O arquivo de dados abertos (ingest_cvm_ipe) só é republicado uma vez por dia
+    e sem hora; quando ele chega, o mesmo protocolo não é duplicado."""
+    import httpx
+    hoje = datetime.now(timezone(timedelta(hours=-3))).date()
+    body = {"dataDe": (hoje - timedelta(days=days)).strftime("%d/%m/%Y"), "dataAte": hoje.strftime("%d/%m/%Y"), "empresa": "",
+            "setorAtividade": "-1", "categoriaEmissor": "-1", "situacaoEmissor": "-1", "tipoParticipante": "1", "dataReferencia": "",
+            "categoria": "IPE_-1_-1_-1", "periodo": "2", "horaIni": "", "horaFim": "", "palavraChave": "", "ultimaDtRef": "false",
+            "tipoEmpresa": "0", "token": "", "versaoCaptcha": ""}
+    try:
+        r = httpx.post(RAD_URL, json=body, timeout=30, headers={"User-Agent": "Mozilla/5.0", "Content-Type": "application/json; charset=utf-8"})
+        r.raise_for_status()
+        d = r.json()["d"]
+        if d.get("temErro"):
+            raise SourceUnavailable(d.get("msgErro") or "erro no RAD")
+    except (httpx.HTTPError, ValueError, KeyError) as e:
+        raise SourceUnavailable(f"RAD/CVM indisponível: {type(e).__name__}") from e
+    run = Run("NEWS:CVM_RAD", "live")
+    norm = {k.lstrip("0"): v for k, v in cvm_codes.items()}
+    known = {x["u"] for x in q("""SELECT substring(url from 'numProtocolo=([0-9]+)') u FROM news_item
+                                  WHERE source='CVM_DADOS' AND published_at >= now() - interval '10 days'""")}
+    cache: dict = {}
+    inserted = 0
+    with tx() as c:
+        rp = save_raw(c, "CVM_DADOS", f"{RAD_URL} {body['dataDe']}–{body['dataAte']}", r.content, "live")
+        for rec in (d.get("dados") or "").split("&*"):
+            f = rec.split("$&")
+            if len(f) < 12:
+                continue
+            iid = norm.get(f[0].replace("-", "").lstrip("0"))
+            cat = f[2].strip()
+            m = _RAD_PROT.search(rec)
+            if not iid or cat not in IPE_KEEP or not m or m.group(3) in known:
+                continue
+            seq, ver, prot = m.groups()
+            ts = re.search(r"(\d{2})/(\d{2})/(\d{4}) (\d{2}):(\d{2})", _strip(f[6]))
+            if not ts:
+                continue
+            dd, mm, yy, hh, mi = ts.groups()
+            if iid not in cache:
+                cache[iid] = (q1("SELECT short_name FROM issuer WHERE id=%s", (iid,))["short_name"], _instruments_of(iid))
+            short, insts = cache[iid]
+            assunto = _strip(f[11]) or _strip(f[4]) or _strip(f[3])
+            head = f"{short} — {cat}: {assunto}".strip(" :")
+            links = [{"issuer_id": iid, "instrument_id": i["id"], "relation": "direct", "rationale": "comunicado do próprio emissor (CVM — Empresas.NET)"} for i in insts] \
+                or [{"issuer_id": iid, "instrument_id": None, "relation": "direct", "rationale": "comunicado do próprio emissor (CVM — Empresas.NET)"}]
+            ok = _upsert(c, {"source": "CVM_DADOS", "outlet": short, "distributor": "CVM — Empresas.NET (consulta pública)", "external_id": f"rad-{prot}",
+                             "url": f"https://www.rad.cvm.gov.br/ENET/frmDownloadDocumento.aspx?Tela=ext&descTipo=IPE&CodigoInstituicao=1&numProtocolo={prot}&numSequencia={seq}&numVersao={ver}",
+                             "lang": "pt", "kind": "official_release", "headline": head[:300],
+                             "published_at": f"{yy}-{mm}-{dd}T{hh}:{mi}:00-03:00", "time_precision": "minute", "region": ["BR"],
+                             "topics": (["dividends"] if "Provento" in cat or "Aviso aos Acionistas" in cat else []) + (["material_fact"] if cat == "Fato Relevante" else []),
+                             "material": cat in ("Fato Relevante", "Relatório Proventos"), "license": "documento público CVM", "raw_payload_id": rp,
+                             "meta": {"categoria": cat, "tipo": _strip(f[3]), "especie": _strip(f[4]), "data_referencia": _strip(f[5])[-10:], "versao": ver}}, links)
+            known.add(prot)
             inserted += ok
     run.stats.update(inserted=inserted)
     return run.finish()

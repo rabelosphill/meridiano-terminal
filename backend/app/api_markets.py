@@ -176,7 +176,8 @@ async def news(tab: str = "top", ticker: Optional[str] = None, exchange: Optiona
                       "links": [x for x in links.get(r["id"], []) if x["ticker"]],
                       "translation": None if not r["translation_allowed"] else "disponível",
                       "translation_note": "tradução indisponível: nenhum serviço de tradução autorizado configurado; exibindo o original"})
-    return {"tab": tab, "items": items, "catalog": NEWS_CATALOG, "as_of": as_of,
+    upd = db.q1("SELECT max(finished_at) t FROM ingestion_run WHERE connector LIKE 'NEWS:%%' AND status='ok'")["t"]
+    return {"tab": tab, "items": items, "catalog": NEWS_CATALOG, "as_of": as_of, "updated_at": upd.isoformat() if upd else None,
             "ordering": "cronológica (Ao Vivo)" if tab != "top" else "material primeiro, depois mais recente (últimos 3 dias da base)"}
 
 

@@ -67,6 +67,10 @@ def ingest(target: str, mode=None):
         out["news:sec:PBR"] = news.ingest_sec("0001119639", ciks["0001119639"], "Petrobras", mode)
         out["news:sec:VALE"] = news.ingest_sec("0000917851", ciks["0000917851"], "Vale", mode)
         codes = issuers_by("CVM_CODE")
+        try:
+            out["news:cvm_rad"] = news.ingest_cvm_rad(codes)
+        except news.SourceUnavailable as e:          # fonte de tempo real fora do ar: o IPE diário cobre depois
+            out["news:cvm_rad"] = {"status": "unavailable", "error": str(e)}
         if target != "news_fast":
             for y in (2025, 2026):
                 out[f"news:cvm_ipe:{y}"] = news.ingest_cvm_ipe(y, codes, mode)

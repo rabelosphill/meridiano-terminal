@@ -29,10 +29,11 @@ export default function News({ route }: { route: Route }) {
         if (!cur) return r;
         const known = new Set(cur.items.map((i: any) => i.id));
         const nw = r.items.filter((i: any) => !known.has(i.id));
-        if (!nw.length) return cur;
-        if ((box.current?.scrollTop || 0) < 4) return { ...cur, items: [...nw, ...cur.items] };
+        const base = { ...cur, updated_at: r.updated_at };
+        if (!nw.length) return base;
+        if ((box.current?.scrollTop || 0) < 4) return { ...base, items: [...nw, ...cur.items] };
         setFresh((f) => [...nw.filter((x: any) => !f.some((y) => y.id === x.id)), ...f]);
-        return cur;
+        return base;
       });
     }), 30000);
     return () => { alive = false; ctl.abort(); clearInterval(t); };
@@ -49,7 +50,7 @@ export default function News({ route }: { route: Route }) {
           <>
             {d.note && <div className="callout">{d.note}</div>}
             {d.items.length === 0 && !d.note && <div className="callout">Nenhum item nesta aba com as fontes integradas. {tab === "asia" || tab === "eu" ? "Veículos asiáticos/europeus dependem de contrato (ver catálogo abaixo)." : ""}</div>}
-            <div className="note">Ordem: {d.ordering}. Fontes integradas são primárias e de uso autorizado; veículos jornalísticos aparecem no catálogo como "depende de contrato".</div>
+            <div className="note"><span className="up">● ao vivo</span> — fontes consultadas a cada 2 min{d.updated_at ? `, última às ${new Date(d.updated_at).toLocaleTimeString("pt-BR", { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit" })} BRT` : ""}. Ordem: {d.ordering}. Fontes integradas são primárias e de uso autorizado; veículos jornalísticos aparecem no catálogo como "depende de contrato".</div>
             <table className="tbl"><tbody>
               {d.items.map((n: any) => (
                 <tr key={n.id} className={open === n.id ? "sel" : ""} style={{ cursor: "pointer", verticalAlign: "top" }} tabIndex={0}

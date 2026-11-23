@@ -18,4 +18,6 @@ SEC_USER_AGENT = _env("SEC_USER_AGENT", "FinTerminal-dev research-bot@example.co
 DATA_MODE = _env("FT_DATA_MODE", "auto")          # live | snapshot | auto (tenta live, cai para snapshot)
 SIM_FEED = _env("FT_SIM_FEED", "1" if ENV != "prod" else "0") == "1"
 SIM_IGNORE_HOURS = _env("FT_SIM_IGNORE_HOURS", "1") == "1"
+# busca de notícias pelo próprio servidor (0 desliga; desligada nos testes)
+NEWS_POLL_SECONDS = int(_env("FT_NEWS_POLL_SECONDS", "120" if ENV != "test" else "0"))
 QUOTE_STALE_SECONDS = int(_env("FT_QUOTE_STALE_SECONDS", "30"))

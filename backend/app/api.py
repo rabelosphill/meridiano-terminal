@@ -3,6 +3,8 @@ import asyncio
 import csv
 import io
 import json
+import subprocess
+import threading
 import time
 from datetime import datetime, timedelta, timezone
 from decimal import Decimal
@@ -57,6 +59,28 @@ def startup():
     if config.SIM_FEED and _sim is None:
         _sim = quotes.SimFeed()
         _sim.start()
+    if config.NEWS_POLL_SECONDS > 0:
+        threading.Thread(target=_news_poller, name="news-poller", daemon=True).start()
+
+
+NEWS_POLL = {"last_run": None, "last_ok": None, "rc": None}
+
+
+def _news_poller():
+    """Mantém as notícias ao vivo enquanto o servidor estiver de pé: roda scripts/update.sh news a cada
+    FT_NEWS_POLL_SECONDS (o script tem trava, então não colide com o agendamento do launchd)."""
+    script = config.ROOT / "scripts" / "update.sh"
+    while True:
+        NEWS_POLL["last_run"] = datetime.now(timezone.utc).isoformat()
+        try:
+            rc = subprocess.run(["/bin/bash", str(script), "news"], cwd=config.ROOT, timeout=300,
+                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode
+        except Exception:
+            rc = -1
+        NEWS_POLL["rc"] = rc
+        if rc == 0:
+            NEWS_POLL["last_ok"] = NEWS_POLL["last_run"]
+        time.sleep(config.NEWS_POLL_SECONDS)
 
 
 def _as_of(v: Optional[str]) -> Optional[datetime]:
